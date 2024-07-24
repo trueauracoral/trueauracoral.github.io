@@ -1,0 +1,30 @@
+#+TITLE: Learning Languages
+#+HTML_HEAD: <link rel='stylesheet' type='text/css' href='styles.css' />
+#+OPTIONS: html-style:nil toc:nil num:nil 
+
+Friday April 19th I started learning Russian more seriously. It has become a part of my daily routine. I probably started earlier however because I needed to know the Cyrllic first. This did not come easy but overtime with practice I got it a bit. It’s learning a new alphabet which is difficult. I still haven’t mastered it but I know the majority.
+
+I used duolingo for school which was way better because you get unlimited lives and extra lessons for free. However there is no leaderboard and there are some features missing. I was able to develop a 22 day streak which is the highest streak I ever got.
+
+https://duolingo.com/users/<username>
+
+Funny json I found.
+
+I think that Duolingo is good, however you also need a strong foundation in english. It repeats concepts over and over which is good for slow learners but not good if you already know something. Like I have practiced how to say the beginning of something at least 20 times and it’s not different at all. I think that would be better displayed as a concept which they show you instead of practicing over and over repetitively. 
+
+Another thing I picked back up on is Anki cards. I downloaded an Anki deck scraped from duolingo and I have practiced that which should be good for me to know most spelling if not google will spell check me into the right place until I eventually get it. Even in English I still make some spelling mistakes so spelling will definitely be a big challenge. Biggest priority is to do Duolingo everyday because it is a solid 5 minutes of practice. However, I like to do anki additionally and that will take 4-8 minutes depending on how many words are scheduled to learn on a later date.
+
+Another thing which helps me learn the letters of russian, reading and typing is typingclub I have picked up on. I originally used typingclub to learn english touch typing but now I am using it for russian and this is good to help with using the language practically. I think that this substantially helped me at learning the letters. I can type some letters and have started today to search for stuff in russian. Prior to this I figured out how to put russian on my old phone and have typed in Russian so it didn’t come right off the bat. On the phone it has great autocomplete but still I need to work on my grammar. 
+
+I think that learning russian everyday is pretty good to fill my days with some meaning it doesn’t take that long to do. Also, not everyday I must do Anki or typingclub, those just speed up the process. I already have some foundation in russian comprehension and can have basic conversations with people so the road to fluency will come for me a bit earlier. One thing I discovered is that I somehow bypassed future tense conjugations and have no clue how to do those for most cases. I can understand them when I hear them but I don’t know how to use them myself. I always say I will use the same conjugation in the end but in reality the complete word will actually change incredibly. 
+
+I studied Spanish at school pretty seriously just by learning vocab and writing every other day and it has been very effective at improving my spanish. I am not at a conversational level but I can understand some Spanish and most importantly I can write spanish. I can say basic sentences. I find this pretty impressive considering I didn’t know Spanish 2 years ago. It’s also funny to analyze and try to comprehend the Spanish used in Better all Saul and understand some of it at first. I believe that I should work on Spanish over the summer by focusing on comprehension and listening to shows I watch in Spanish dub or with Spanish subtitles in order to focus on immersion. I know important conjugations and important vocab words but Spanish the way it’s spoken and written is rather difficult. I need to focus on that. Maybe if I move to a Spanish speaking country this skill will come in handy. I am better than most of my peers in class because I use the language as much as I can even though I am bad at it. I will most likely shift gears to typing russian at some point. An inspiration to me in this has been livakivi's videos on him documenting his japanese learning. I want to try and document some of my language learning as well. Language learning is super fun and I plan on continuing. I have done more serious Russian learning for a month or so now. I started more seriously last year at the beginning of highschool learning Spanish and I have only continued since.
+
+* License
+#+BEGIN_EXPORT html 
+<hr> 
+<footer> 
+<a rel='license' href='http://creativecommons.org/licenses/by-sa/4.0/'><img alt='Creative Commons License' style='border-width:0' width='88' height='31' src='../images/cc-by-sa.png' /></a><br> 
+Unless otherwise noted, all content on this website is Copyright Zortazert 2021-2023 and is licensed under <a rel='license' href='http://creativecommons.org/licenses/by-sa/4.0/'>CC BY-SA 4.0</a>. 
+</footer> 
+#+END_EXPORT 

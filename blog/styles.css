@@ -1,0 +1,70 @@
+* {
+    background-color: #1A1919;
+    font-size: 20px;
+    list-style-type: none;
+}
+
+body{
+    color: #DAD3CE;
+    font-family:mononoki;
+}
+
+@font-face {
+  font-family: mononoki;
+  src: url(mononoki.woff);
+}
+
+pre {
+    background: #1a1919;
+    border: 10px solid #928374;
+    border-radius: 10px;
+    display: block;
+    padding: 1em;
+    margin: 1em;
+    white-space: pre-wrap;
+}
+
+h1 {
+    font-size: 30px;
+    color: #e66337;
+}
+
+h2 {
+    font-size: 25px;
+    color: #cc722e;
+}
+
+h3 {
+    font-size: 22px;
+    color: #E48D4C;
+}
+
+code {
+	background-color: #1a1919;
+	/*border: 5px solid #928374;*/
+	border-radius: 5px;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+}
+
+ul li {
+    list-style: inside circle;
+    display:list-item;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid #7c6f64;
+} 
+
+th,td {
+  border: 2px solid #7c6f64;
+}
+
+a {
+    color: #E09A5E;
+}
+
+a:hover {
+    color: #d5c4a1;
+}

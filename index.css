@@ -1,0 +1,54 @@
+:root {
+    --radiusNumber: 200px;
+    --white: rgb(233, 233, 233);
+    --gray: rgb(147, 147, 147)
+}
+
+.navButton p {
+    color: var(--gray);
+    font-size: 25px;
+}
+.navButton:hover p {
+    color: var(--white);
+    font-size: 25px;
+    text-decoration: none;
+}
+
+#circle {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    margin: auto;
+    border: 1px solid black;
+    /*background-image: url("./img/icons/youtube.ico");*/
+}
+.navButton {
+    position: absolute;
+    background-color: rgb(23, 23, 23);
+    text-align: center;
+    line-height: 4rem;
+    display: inline;
+    color: rgb(233, 233, 233);
+    border-radius: 50%;
+    height: 7rem;
+    width: 7rem;
+    transform: translate(-50%, -50%);
+}
+
+.navButton:hover {
+    border: 5px solid var(--gray);
+}
+
+/* https://stackoverflow.com/a/74816531/24903843 */
+body:has(#navButton1:hover) #circle {
+    background-image: url("./img/icons/youtube.ico");
+}
+
+#navButton1 {left: calc(150.0px + var(--radiusNumber)); top: calc(0.0px + var(--radiusNumber))}
+#navButton2 {left: calc(93.52347027881004px + var(--radiusNumber)); top: calc(117.27472237020447px + var(--radiusNumber))}
+#navButton3 {left: calc(-33.37814009344715px + var(--radiusNumber)); top: calc(146.23918682727356px + var(--radiusNumber))}
+#navButton4 {left: calc(-135.14533018536287px + var(--radiusNumber)); top: calc(65.08256086763373px + var(--radiusNumber))}
+#navButton5 {left: calc(-135.14533018536287px + var(--radiusNumber)); top: calc(-65.0825608676337px + var(--radiusNumber))}
+#navButton6 {left: calc(-33.378140093447186px + var(--radiusNumber)); top: calc(-146.23918682727356px + var(--radiusNumber))
+}
+#navButton7 {left: calc(93.52347027881001px + var(--radiusNumber)); top: calc(-117.27472237020449px + var(--radiusNumber))}

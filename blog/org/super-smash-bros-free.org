@@ -1,0 +1,52 @@
+#+TITLE: Super Smash Bros Free
+#+HTML_HEAD: <link rel='stylesheet' type='text/css' href='styles.css' />
+#+OPTIONS: html-style:nil toc:nil num:nil 
+
+#+BEGIN_QUOTE
+If game good, game free (sketchy download links should not apply) ---me
+#+END_QUOTE
+
+* Super Scratch Bros
+https://scratch.mit.edu/projects/318927435/
+
+As the name says this is a scratch version of smash bros. You can play in your browser. Assuming you have internet access. If you want to save the game for offline access you can:
+- Click the see inside button or append =/editor= to the link above.
+- Click =File= on the top ribbon
+  - Click =Save to your computer=
+- Install scratch 3.0
+  - Click =File= on the top ribbon
+    - Click =Load from your computer=
+
+Another way to get the .sb3 file is to use this [[https://github.com/rebane2001/scratch-dl][script]].
+
+* Super Smash Flash and Super Smash Flash 2
+Classics. Both Super Smash Flash and Super Smash Flash 2 can be found on https://supersmashflash.com. They can be played if you maraculously have flash in your browser, or through Ruffle on super smash flash 1, flashpoint and official download links on their website.
+
+- [[Super Smash Flash 2][https://www.supersmashflash.com/play/ssf2/]]
+- [[Super Smash Flash 1][https://www.supersmashflash.com/play/ssf1/]]
+
+* Super Smash Land
+One of the best demakes in the history of fan demakes. Super Smash Land is a super smash bros in the gameboy art style. Free to play through the download link on the website
+
+http://www.supersmashland.com/
+
+* Link clickery 🖱
+All Super Smash Bros games I am 95% sure (have not tested) can work in emulators. From the begining Super Smash Bros has placed an emphasis on the usage of an analog stick for many attacks and movements. Theorettically a keyboard should work but you can't go 45 degrees. https://keyboard.gg/ aims to combat this by making keys assigned to 45 degree analog stick movements. Maybe similar functionality could be modded into emulators but for now I think you need a controller/analog stick.
+
+| Name                               | System          | Emulator |
+|------------------------------------+-----------------+----------|
+| Super Smash Bros.                  | Nintendo 64     | [[https://github.com/Rosalie241/RMG][RMG]]      |
+| Super Smash Bros. Melee            | GameCube        | [[https://dolphin-emu.org/][dolphin]]  |
+| Super Smash Bros. Brawl            | Wii             | [[https://dolphin-emu.org/][dolphin]]  |
+| Super Smash Bros. for Nintendo 3DS | Nintendo 3DS    | [[https://citra-emu.org/][citra]]    |
+| Super Smash Bros. for Wii U        | Wii U           | [[https://cemu.info/][cemu]]     |
+| Super Smash Bros. Ultimate         | Nintendo Switch | [[https://ryujinx.org/][ryujinx]]  |
+
+* License
+#+BEGIN_EXPORT html 
+<hr> 
+<footer> 
+<a rel='license' href='http://creativecommons.org/licenses/by-sa/4.0/'><img alt='Creative Commons License' style='border-width:0' width='88' height='31' src='../images/cc-by-sa.png' /></a><br> 
+Unless otherwise noted, all content on this website is Copyright Zortazert 2021-2022 and is licensed under <a rel='license' href='http://creativecommons.org/licenses/by-sa/4.0/'>CC BY-SA 4.0</a>. 
+</footer> 
+#+END_EXPORT 

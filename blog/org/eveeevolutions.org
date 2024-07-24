@@ -1,0 +1,44 @@
+#+TITLE: Eevee Evolutions
+#+HTML_HEAD: <link rel='stylesheet' type='text/css' href='styles.css' />
+#+OPTIONS: html-style:nil toc:nil num:nil
+
+New Evee evolution speculation is happening right now and I would like to give my take on all the possible ones that could happen. Maybe I will draw one of the likely new Evee evolutions to come out. These are the ones that are available to work with:
+- Bug
+- Poison
+- Flying
+- Rock
+- Ground
+- Dragon
+- Steel
+- Fighting
+- Ghost
+However, a lot of them I think are unlikely to happen.
+* IMPOSSIBLE TO HAPPEN (In my opinion)
+** Dragon
+Evee doesn't look like a lizard animal like most dragon types. Evee looks more like a combination of a dog and a cat. So dragon doesn't fit in my opinion.
+** Steel
+Evee doesn't look like a peice of metal, like most steel types. So once again just doesn't fit in my opinion. At less somehow a peice of metal gets attached to it. Unlikely I think.
+** Fighting
+Evee is litterally a normal type. So if it evolved into a fighting type that would be weird because evee originally a normal type has a weakness towards fighting types.
+** Ghost
+Evee evolving into a ghost type would mean, a little cute evee death happened...
+* POSSIBLE TO HAPPEN!
+** Bug
+An evee bug type would be pretty cool. The transformation from this soft puppy to an insect will be interesting.
+** Poison
+Evee gaining the ability to release toxins or inject toxins either way would be epic. Possibly some stinger on the tail. However, they need to keep evee still cute.
+** Flying
+Evee growing wings would be interesting, given that evee has been firmly put on the ground all of it's life.
+** Rock
+Evee freaking throwing rocks and having a tail made out of rocks will be very cool.
+** Ground
+IDK what evee's going to do by being a ground type.
+
+* Licence
+#+BEGIN_EXPORT html 
+<hr> 
+<footer> 
+<a rel='license' href='http://creativecommons.org/licenses/by-sa/4.0/'><img alt='Creative Commons License' style='border-width:0' width='88' height='31' src='../images/cc-by-sa.png' /></a><br> 
+Unless otherwise noted, all content on this website is Copyright Zortazert 2021-2022 and is licensed under <a rel='license' href='http://creativecommons.org/licenses/by-sa/4.0/'>CC BY-SA 4.0</a>. 
+</footer> 
+#+END_EXPORT 
