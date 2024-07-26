@@ -8,7 +8,7 @@ radius = 150
 
 coordinates = []
 navHTML = ""
-content = "<p>Hi! This is my website an aggregation of all my creations.</p>"
+content = ""
 
 csscontent = ""
 for i in list(range(PARTS)):

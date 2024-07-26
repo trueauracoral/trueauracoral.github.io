@@ -72,11 +72,4 @@ Invidious is a very plain topic. The software works well and *you* should use it
 Plume is a MD article posting place. It is supposed to work, I have a account there but it's not letting me post articles without shrinking them into one big line. Other people have it all working. It seems like plume is still in early development. One day I think it will be really good. For now it's usable but you may have issues with it.
 * Fchan
 Fchan is another software that's a bit early in development but it definitely works! It is a FOSS image board that looks a lot like 4chan. It works well it's just lacking in users. I asked 4chan why there still on proprietary 4chan, they said "All my friends are on it!" 4chan even decided to close the post! Absolutely horrible! Go use fchan (Fedderated channels).
-* License
-#+BEGIN_EXPORT html 
-<hr> 
-<footer> 
-<a rel='license' href='http://creativecommons.org/licenses/by-sa/4.0/'><img alt='Creative Commons License' style='border-width:0' width='88' height='31' src='../images/cc-by-sa.png' /></a><br> 
-Unless otherwise noted, all content on this website is Copyright Zortazert 2021-2022 and is licensed under <a rel='license' href='http://creativecommons.org/licenses/by-sa/4.0/'>CC BY-SA 4.0</a>. 
-</footer> 
-#+END_EXPORT 
+
