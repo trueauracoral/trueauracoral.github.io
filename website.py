@@ -132,7 +132,6 @@ def main():
     with open(blogPage, "w", encoding="utf-8") as file:
         file.write(htmlify(blogHTML))
     
-    print(blogData)
     ## Create RSS for blog
     rss = minidom.Document()
     print(rss.getElementsByTagName("xml"))
@@ -160,7 +159,7 @@ def main():
     image = rss.createElement('image')
     channel.appendChild(image)
     imageTitle = rss.createElement('title')
-    imageTitle.appendChild(rss.createTextNode(websiteTitle))
+    imageTitle.appendChild(rss.createTextNode(f"{websiteTitle}'s Title"))
     image.appendChild(imageTitle)    
     imageUrl = rss.createElement('url')
     imageUrl.appendChild(rss.createTextNode(urljoin(websiteTitle, "/img/icons/chadoku.ico")))
@@ -175,18 +174,18 @@ def main():
         itemTitle = rss.createElement('title')
         itemTitle.appendChild(rss.createTextNode(article['title']))
         item.appendChild(itemTitle)
-        
         guid = rss.createElement('guid')
         guid.appendChild(rss.createTextNode(article['url']))
         item.appendChild(guid)
-        
         itemLink = rss.createElement('link')
         itemLink.appendChild(rss.createTextNode(urljoin(websiteUrl, f"/blog/{article['url']}")))
         item.appendChild(itemLink)
-        
         pubDate = rss.createElement('pubDate')
         pubDate.appendChild(rss.createTextNode(article['date'].strftime("%a, %d %b %Y %H:%M:%S %z")))
         item.appendChild(pubDate)
+        author = rss.createElement('author')
+        author.appendChild(rss.createTextNode(websiteTitle))
+        item.appendChild(author)
         
         with open(article['file'], 'r', encoding="utf-8") as file:
             articleText = file.read()
@@ -202,6 +201,8 @@ def main():
     with open("rss.xml", "w", encoding="utf-8") as f: 
         f.write(xml_str) 
         print("Exported: rss.xml")
+
+    print(blogData)
     
 if __name__ == "__main__":
     main()
