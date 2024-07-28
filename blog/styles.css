@@ -68,3 +68,8 @@ a {
 a:hover {
     color: #d5c4a1;
 }
+
+/* https://stackoverflow.com/questions/75095318/content-in-li-is-pushed-to-new-line-when-present-under-p-tag */
+p {
+    display: inline;
+}
