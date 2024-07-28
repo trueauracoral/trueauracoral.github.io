@@ -188,7 +188,7 @@ def main():
         pubDate.appendChild(rss.createTextNode(article['date'].strftime("%a, %d %b %Y %H:%M:%S %z")))
         item.appendChild(pubDate)
         
-        with open(article['file'], 'r') as file:
+        with open(article['file'], 'r', encoding="utf-8") as file:
             articleText = file.read()
             articleText = to_html(articleText, toc=False, offset=0, highlight=True).replace('\n','')
 
