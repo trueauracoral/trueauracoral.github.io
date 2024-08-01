@@ -1,6 +1,7 @@
 #+TITLE: Fediverse review
 #+HTML_HEAD: <link rel='stylesheet' type='text/css' href='styles.css' />
 #+OPTIONS: html-style:nil toc:nil num:nil 
+#+TAGS: software
 
 * What is the fediverse?
 The fediverse is a lot of software such as [[https://en.wikipedia.org/wiki/Mastodon_(software)][Mastodon]], [[https://en.wikipedia.org/wiki/PeerTube][peertube]] and a lot more I will try and cover my experiences with different federation software I have used in this article. I find a new one of them everyday.

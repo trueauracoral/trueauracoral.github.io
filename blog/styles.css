@@ -73,3 +73,10 @@ a:hover {
 p {
     display: inline;
 }
+
+#tagsList {
+    border: solid 5px;
+    border-width: fit-content;
+    border-spacing: 5px;
+    display: inline-block;
+}

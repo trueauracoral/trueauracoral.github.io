@@ -7,16 +7,9 @@ from dateutil.relativedelta import relativedelta
 from orgpython import to_html
 import json
 from bs4 import BeautifulSoup
-from xml.dom import minidom 
-
-websiteTitle = "ZortaZert"
-websiteUrl = "https://trueauracoral.github.io"
-articlesDir = os.path.join(os.getcwd(), "blog/org")
-articlesWebDir = "./blog/org/"
-blogDir = os.path.join(os.getcwd(), "blog")
-markup = "org"
-exportAll = True
-dateformat = "%y-%m-%d"
+from rssGenerator import rss_generator
+from config import *
+import re
 
 currentDate = datetime.datetime.now()
 
@@ -35,8 +28,10 @@ def getfiles(dirpath):
 articles = getfiles(articlesDir)
 blogData = []
 
-with open("top.html", "r") as file:
-    topHTML = file.read()
+topHTML = ""
+with open("top.html", "r", encoding="utf-8") as file:
+    topHTMLread = str(file.read())
+topHTML = topHTMLread
 
 with open("bottom.html", "r") as file:
     bottomHTML = "\n" + file.read()
@@ -59,6 +54,7 @@ def htmlify(middleStuff):
     return data
 
 def main():
+    global topHTML
     #BLOG!!
     # Gather info from files
     for article in articles:
@@ -66,14 +62,16 @@ def main():
         date = fileGetDate(article)
         with open(path, "r") as file:
             articleText = file.read()
-            title = ' '.join(articleText.splitlines()[0].split(" ")[1:])
+            title = re.findall("(?<=\#\+TITLE: ).*", articleText)[0]
+            tags = list(filter(None, re.findall("(?<=\#\+TAGS: ).*", articleText)[0].split(" ")))
 
         blogData.append({
             "file": path,
             "title": title,
             "url": urljoin("./blog", article.replace(date+'-','').replace("org", "html")),
             "date": datetime.datetime.fromtimestamp(strToDatetime(date)),
-            "dateStr": date
+            "dateStr": date,
+            "tags": tags
         })
 
     # Export the Org documents with org-python
@@ -91,6 +89,15 @@ def main():
                 f.write(htmlify(orgToHTML))
 
         print(f"Exported: {file}")
+
+    def blogIndex(blogData):
+        print(blogData)
+        blogHTML = "<ul>\n"
+
+        for i, article in enumerate(blogData):
+            blogHTML += f"""\n<li><a href='{blogData[i]['url']}'>{blogData[i]['title']}</a> ({blogData[i]['date'].strftime("%B %d")})</li>"""
+        blogHTML += "\n</ul>"
+        return htmlify(blogHTML)
 
     for i, file in enumerate(blogData):
         file = blogData[i]["file"]
@@ -129,80 +136,41 @@ def main():
     blogHTML += "\n</ul>"
 
     blogPage = os.path.join(blogDir, "index.html")
-    with open(blogPage, "w", encoding="utf-8") as file:
-        file.write(htmlify(blogHTML))
     
     ## Create RSS for blog
-    rss = minidom.Document()
-    print(rss.getElementsByTagName("xml"))
-    rssElement = rss.createElement('rss')
-    rssElement.setAttribute('version', '2.0')
-    rss.appendChild(rssElement)
-    channel = rss.createElement('channel')
-    rssElement.appendChild(channel)
-    title = rss.createElement('title')
-    title.appendChild(rss.createTextNode(websiteTitle))
-    channel.appendChild(title)
-    language = rss.createElement('language')
-    language.appendChild(rss.createTextNode("en-us"))
-    channel.appendChild(language)
-    link = rss.createElement('link')
-    link.appendChild(rss.createTextNode(urljoin(websiteUrl, "rss.xml")))
-    channel.appendChild(link)
-    
-    #atomLink = rss.createElement('atom:link')
-    #atomLink.setAttribute('href', 'https://monstro1.com/rss.xml')
-    #atomLink.setAttribute('rel', 'self')
-    #atomLink.setAttribute('type', 'application/rss+xml')
-    #channel.appendChild(atomLink)
-    
-    image = rss.createElement('image')
-    channel.appendChild(image)
-    imageTitle = rss.createElement('title')
-    imageTitle.appendChild(rss.createTextNode(f"{websiteTitle}'s Title"))
-    image.appendChild(imageTitle)    
-    imageUrl = rss.createElement('url')
-    imageUrl.appendChild(rss.createTextNode(urljoin(websiteTitle, "/img/icons/chadoku.ico")))
-    image.appendChild(imageUrl)    
-    imageLink = rss.createElement('link')
-    imageLink.appendChild(rss.createTextNode(urljoin(websiteUrl, "rss.xml")))
-    image.appendChild(imageLink)
+    rss_generator(blogData, currentDate)
 
+    ## Create Tags for blog
+    blogData.reverse()
+    tags = []
     for article in blogData:
-        item = rss.createElement('item')
-        channel.appendChild(item)
-        itemTitle = rss.createElement('title')
-        itemTitle.appendChild(rss.createTextNode(article['title']))
-        item.appendChild(itemTitle)
-        guid = rss.createElement('guid')
-        guid.appendChild(rss.createTextNode(article['url']))
-        item.appendChild(guid)
-        itemLink = rss.createElement('link')
-        itemLink.appendChild(rss.createTextNode(urljoin(websiteUrl, f"/blog/{article['url']}")))
-        item.appendChild(itemLink)
-        pubDate = rss.createElement('pubDate')
-        pubDate.appendChild(rss.createTextNode(article['date'].strftime("%a, %d %b %Y %H:%M:%S %z")))
-        item.appendChild(pubDate)
-        author = rss.createElement('author')
-        author.appendChild(rss.createTextNode(websiteTitle))
-        item.appendChild(author)
-        
-        with open(article['file'], 'r', encoding="utf-8") as file:
-            articleText = file.read()
-            articleText = to_html(articleText, toc=False, offset=0, highlight=True).replace('\n','')
-
-        description = rss.createElement('description')
-        description.appendChild(rss.createTextNode(articleText))
-        item.appendChild(description)
+        tags += article['tags']
+    tags = list(set(tags))
+    print(tags)
+    tags += ["all"]
+    tagsDir = os.path.join(os.getcwd(), "tags")
+    tagsHTML = "<div id='tagsList'>"
+    for tag in tags:
+        if tag == "all":
+            tagURL = "/blog/index.html"
+        else:
+            tagURL = f"/tags/{tag}/index.html"
+        tagsHTML += f"  <a href={tagURL}>{tag.title()}</a>"
+    topHTML += tagsHTML + " </div>"
+    for tag in tags:
+        tagDir = os.path.join(tagsDir, tag)
+        if os.path.isdir(tagDir) == False:
+            os.mkdir(tagDir)
+        tagArticles = []
+        for i, article in enumerate(blogData):
+            articleTags = article['tags']
+            if tag in articleTags:
+                tagArticles.append(blogData[i])
+        with open(os.path.join(os.path.join(tagsDir, tag), "index.html"), "w", encoding="utf-8") as file:
+            file.write(blogIndex(tagArticles))
     
-    xml_str = rss.toprettyxml(indent ="  ")  
-    #print(xml_str)
+    with open(blogPage, "w", encoding="utf-8") as file:
+        file.write(htmlify(blogHTML))
 
-    with open("rss.xml", "w", encoding="utf-8") as f: 
-        f.write(xml_str) 
-        print("Exported: rss.xml")
-
-    print(blogData)
-    
 if __name__ == "__main__":
     main()

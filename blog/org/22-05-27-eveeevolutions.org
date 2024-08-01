@@ -1,6 +1,7 @@
 #+TITLE: Eevee Evolutions
 #+HTML_HEAD: <link rel='stylesheet' type='text/css' href='styles.css' />
 #+OPTIONS: html-style:nil toc:nil num:nil
+#+TAGS: pokemon anime
 
 New Evee evolution speculation is happening right now and I would like to give my take on all the possible ones that could happen. Maybe I will draw one of the likely new Evee evolutions to come out. These are the ones that are available to work with:
 - Bug

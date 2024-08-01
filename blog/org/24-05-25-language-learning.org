@@ -1,6 +1,7 @@
 #+TITLE: Learning Languages
 #+HTML_HEAD: <link rel='stylesheet' type='text/css' href='styles.css' />
 #+OPTIONS: html-style:nil toc:nil num:nil 
+#+TAGS: language
 
 Friday April 19th I started learning Russian more seriously. It has become a part of my daily routine. I probably started earlier however because I needed to know the Cyrllic first. This did not come easy but overtime with practice I got it a bit. It’s learning a new alphabet which is difficult. I still haven’t mastered it but I know the majority.
 

@@ -1,6 +1,7 @@
 #+TITLE: How to degoogle
 #+HTML_HEAD: <link rel='stylesheet' type='text/css' href='styles.css' />
-#+OPTIONS: html-style:nil toc:nil num:nil 
+#+OPTIONS: html-style:nil toc:nil num:nil
+#+TAGS: software 
 
 * Google's Popularity
 Google is like a household name to a lot of people that use the computer. For the price of *0 DOLLARS* the registered account gets access to free email. Email is essential for authenticating accounts, messaging freinds and a lot of things. So you need a email and you just turn to google. 

@@ -1,6 +1,7 @@
 #+TITLE: Super Smash Bros Free
 #+HTML_HEAD: <link rel='stylesheet' type='text/css' href='styles.css' />
 #+OPTIONS: html-style:nil toc:nil num:nil 
+#+TAGS: tutorial gaming software
 
 #+BEGIN_QUOTE
 If game good, game free (sketchy download links should not apply) ---me
