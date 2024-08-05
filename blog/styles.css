@@ -75,8 +75,43 @@ p {
 }
 
 #tagsList {
-    border: solid 5px;
-    border-width: fit-content;
-    border-spacing: 5px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
     display: inline-block;
+    gap: 3px; 
+    /* border: solid 5px;
+    border-width: fit-content; */
+}
+
+#tagsList li {
+    display: inline;
+}
+
+#tagsList button {
+    background-color: #cc722e; 
+    border: none; 
+    color: white; 
+    padding: 5px 5px; 
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px; 
+    margin: 4px 2px; 
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+#tagsList button:hover {
+    background-color: rgb(147, 73, 20); 
+}
+
+#tagsList a {
+    color: white; 
+    text-decoration: none; 
+}
+
+#tagsList a:hover {
+    text-decoration: underline; 
 }

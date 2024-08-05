@@ -149,14 +149,18 @@ def main():
     print(tags)
     tags += ["all"]
     tagsDir = os.path.join(os.getcwd(), "tags")
-    tagsHTML = "<div id='tagsList'>"
+    tagsHTML = "<ul id='tagsList'>"
     for tag in tags:
         if tag == "all":
             tagURL = "/blog/index.html"
         else:
             tagURL = f"/tags/{tag}/index.html"
-        tagsHTML += f"  <a href={tagURL}>{tag.title()}</a>"
-    topHTML += tagsHTML + " </div>"
+        tagsHTML += f"""<li>
+    <button>
+        <a href={tagURL}>{tag.title()}</a>
+    </button>
+</li>"""
+    topHTML += tagsHTML + "\n</ul>"
     for tag in tags:
         tagDir = os.path.join(tagsDir, tag)
         if os.path.isdir(tagDir) == False:
