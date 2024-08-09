@@ -92,7 +92,7 @@ def main():
 
     def blogIndex(blogData):
         print(blogData)
-        blogHTML = "<ul>\n"
+        blogHTML = tagsHTML + "<ul>\n"
 
         for i, article in enumerate(blogData):
             blogHTML += f"""\n<li><a href='{blogData[i]['url']}'>{blogData[i]['title']}</a> ({blogData[i]['date'].strftime("%B %d")})</li>"""
@@ -160,7 +160,7 @@ def main():
         <a href={tagURL}>{tag.title()}</a>
     </button>
 </li>"""
-    topHTML += tagsHTML + "\n</ul>"
+    tagsHTML += "\n</ul>"
     for tag in tags:
         tagDir = os.path.join(tagsDir, tag)
         if os.path.isdir(tagDir) == False:
@@ -174,7 +174,21 @@ def main():
             file.write(blogIndex(tagArticles))
     
     with open(blogPage, "w", encoding="utf-8") as file:
-        file.write(htmlify(blogHTML))
+        file.write(htmlify(tagsHTML + blogHTML))
+
+    # Generate Main Pages
+    sourceDir = os.path.join(os.getcwd(), "source")
+    print(sourceDir)
+    mainPages = os.listdir(sourceDir)
+    print(mainPages)
+    for page in mainPages:
+        pageDir = os.path.join(sourceDir, page)
+        with open(pageDir, "r", encoding="utf-8") as file:
+            pageContent = file.read()
+        print(pageContent)
+        print(os.path.join(os.getcwd(), page))
+        with open(os.path.join(os.getcwd(), page), "w", encoding="utf-8") as file:
+            file.write(htmlify(pageContent))
 
 if __name__ == "__main__":
     main()
