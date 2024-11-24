@@ -35,7 +35,7 @@ h2 {
 }
 
 h3 {
-    font-size: 22px;
+    font-size: 20px;
     color: #E48D4C;
 }
 
@@ -71,7 +71,9 @@ a:hover {
 
 /* https://stackoverflow.com/questions/75095318/content-in-li-is-pushed-to-new-line-when-present-under-p-tag */
 p {
-    display: inline;
+    display: block;
+    margin: 0;
+    padding-top: 10px;
 }
 
 #tagsList {

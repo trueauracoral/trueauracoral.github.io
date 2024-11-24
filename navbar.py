@@ -4,7 +4,7 @@ import pyperclip
 
 PARTS = 7
 sectionAdd = (2*math.pi)/PARTS
-radius = 150
+radius = 200
 
 coordinates = []
 navHTML = ""

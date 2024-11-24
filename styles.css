@@ -1,11 +1,43 @@
 :root {
     --radiusNumber: 200px;
     --white: rgb(233, 233, 233);
-    --gray: rgb(147, 147, 147)
+    --gray: rgb(153, 153, 153)
+}
+
+* {
+    background-color: #1A1919;
+    font-size: 20px;
+    list-style-type: none;
+}
+
+body{
+    color: #DAD3CE;
+    font-family:mononoki;
+}
+
+@font-face {
+  font-family: mononoki;
+  src: url(mononoki.woff);
+}
+
+h1 {
+    font-size: 30px;
+    color: #e66337;
+}
+
+h2 {
+    font-size: 25px;
+    color: #cc722e;
+}
+
+h3 {
+    font-size: 20px;
+    color: #E48D4C;
 }
 
 .navButton p {
     color: var(--gray);
+    background-color: transparent;
     font-size: 25px;
 }
 .navButton:hover p {
@@ -24,7 +56,7 @@
 }
 .navButton {
     position: absolute;
-    background-color: rgb(23, 23, 23);
+    background-color: rgb(74, 74, 74);
     text-align: center;
     line-height: 4rem;
     display: inline;
@@ -41,14 +73,24 @@
 
 /* https://stackoverflow.com/a/74816531/24903843 */
 body:has(#navButton1:hover) #circle {
-    background-image: url("./img/icons/youtube.ico");
+    background-image: url("./img/pencil.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 35% 30%;
 }
 
-#navButton1 {left: calc(150.0px + var(--radiusNumber)); top: calc(0.0px + var(--radiusNumber))}
-#navButton2 {left: calc(93.52347027881004px + var(--radiusNumber)); top: calc(117.27472237020447px + var(--radiusNumber))}
-#navButton3 {left: calc(-33.37814009344715px + var(--radiusNumber)); top: calc(146.23918682727356px + var(--radiusNumber))}
-#navButton4 {left: calc(-135.14533018536287px + var(--radiusNumber)); top: calc(65.08256086763373px + var(--radiusNumber))}
-#navButton5 {left: calc(-135.14533018536287px + var(--radiusNumber)); top: calc(-65.0825608676337px + var(--radiusNumber))}
-#navButton6 {left: calc(-33.378140093447186px + var(--radiusNumber)); top: calc(-146.23918682727356px + var(--radiusNumber))
+body:has(#navButton2:hover) #circle {
+    background-image: url("./img/brush.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30% 30%;
 }
-#navButton7 {left: calc(93.52347027881001px + var(--radiusNumber)); top: calc(-117.27472237020449px + var(--radiusNumber))}
+
+
+#navButton1 {left: calc(200.0px + var(--radiusNumber)); top: calc(0.0px + var(--radiusNumber))}
+#navButton2 {left: calc(124.69796037174672px + var(--radiusNumber)); top: calc(156.36629649360597px + var(--radiusNumber))}
+#navButton3 {left: calc(-44.50418679126287px + var(--radiusNumber)); top: calc(194.98558243636472px + var(--radiusNumber))}
+#navButton4 {left: calc(-180.19377358048382px + var(--radiusNumber)); top: calc(86.77674782351164px + var(--radiusNumber))}
+#navButton5 {left: calc(-180.19377358048382px + var(--radiusNumber)); top: calc(-86.7767478235116px + var(--radiusNumber))}
+#navButton6 {left: calc(-44.50418679126292px + var(--radiusNumber)); top: calc(-194.98558243636472px + var(--radiusNumber))}
+#navButton7 {left: calc(124.69796037174667px + var(--radiusNumber)); top: calc(-156.36629649360597px + var(--radiusNumber))}
