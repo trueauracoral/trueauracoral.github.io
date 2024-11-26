@@ -78,14 +78,24 @@ body:has(#navButton1:hover) #circle {
     background-position: center;
     background-size: 35% 30%;
 }
-
 body:has(#navButton2:hover) #circle {
     background-image: url("./img/brush.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 30% 30%;
 }
-
+body:has(#navButton3:hover) #circle {
+    background-image: url("./img/code.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60% 60%;
+}
+body:has(#navButton4:hover) #circle {
+    background-image: url("./img/phone.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50% 50%;
+}
 
 #navButton1 {left: calc(200.0px + var(--radiusNumber)); top: calc(0.0px + var(--radiusNumber))}
 #navButton2 {left: calc(124.69796037174672px + var(--radiusNumber)); top: calc(156.36629649360597px + var(--radiusNumber))}
