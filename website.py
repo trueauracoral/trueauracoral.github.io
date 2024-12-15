@@ -91,7 +91,6 @@ def main():
         print(f"Exported: {file}")
 
     def blogIndex(blogData):
-        print(blogData)
         blogHTML = tagsHTML + "<ul>\n"
 
         for i, article in enumerate(blogData):
@@ -145,8 +144,38 @@ def main():
     tags = []
     for article in blogData:
         tags += article['tags']
+    alltags = tags
     tags = list(set(tags))
     print(tags)
+
+    tagsCounter = {}
+    for tag in tags:
+        tagsCounter[tag] = alltags.count(tag)
+
+    print(tagsCounter)
+
+    def get_font_class(count):
+        if count == 1:
+            return "font-size-1"
+        elif count <= 3:
+            return "font-size-2"
+        elif count <= 19:
+            return "font-size-3"
+        elif count <= 49:
+            return "font-size-4"
+        else:
+            return "font-size-5"
+
+    tagcloud = "<div class=\"tagcloud\">\n"
+    for tag, count in tagsCounter.items():
+        font_class = get_font_class(count)
+        tagcloud += f"  <span class=\"{font_class}\">\n"
+        tagcloud += f"    <a href=\"/tags/{tag}/index.html\">{tag}</a> <span>({count})</span>\n"
+        tagcloud += "  </span>\n"
+    tagcloud += "</div>"
+
+    print(tagcloud)
+    
     tags += ["all"]
     tagsDir = os.path.join(os.getcwd(), "tags")
     tagsHTML = "<ul id='tagsList'>"
@@ -174,19 +203,19 @@ def main():
             file.write(blogIndex(tagArticles))
     
     with open(blogPage, "w", encoding="utf-8") as file:
-        file.write(htmlify(tagsHTML + blogHTML))
+        file.write(htmlify(tagsHTML + blogHTML + tagcloud))
 
     # Generate Main Pages
     sourceDir = os.path.join(os.getcwd(), "source")
-    print(sourceDir)
+    #print(sourceDir)
     mainPages = os.listdir(sourceDir)
-    print(mainPages)
+    #print(mainPages)
     for page in mainPages:
         pageDir = os.path.join(sourceDir, page)
         with open(pageDir, "r", encoding="utf-8") as file:
             pageContent = file.read()
-        print(pageContent)
-        print(os.path.join(os.getcwd(), page))
+        #print(pageContent)
+        #print(os.path.join(os.getcwd(), page))
         with open(os.path.join(os.getcwd(), page), "w", encoding="utf-8") as file:
             file.write(htmlify(pageContent))
 

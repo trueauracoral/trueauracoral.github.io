@@ -34,7 +34,7 @@ def rss_generator(blogData, currentDate):
     imageTitle.appendChild(rss.createTextNode(f"{websiteTitle}'s Title"))
     image.appendChild(imageTitle)    
     imageUrl = rss.createElement('url')
-    imageUrl.appendChild(rss.createTextNode(urljoin(websiteTitle, "/img/icons/chadoku.ico")))
+    imageUrl.appendChild(rss.createTextNode(urljoin(websiteUrl, "/img/icons/chadoku.ico")))
     image.appendChild(imageUrl)    
     imageLink = rss.createElement('link')
     imageLink.appendChild(rss.createTextNode(urljoin(websiteUrl, "rss.xml")))
@@ -47,7 +47,7 @@ def rss_generator(blogData, currentDate):
         itemTitle.appendChild(rss.createTextNode(article['title']))
         item.appendChild(itemTitle)
         guid = rss.createElement('guid')
-        guid.appendChild(rss.createTextNode(article['url']))
+        guid.appendChild(rss.createTextNode(urljoin(websiteUrl, article['url'])))
         item.appendChild(guid)
         itemLink = rss.createElement('link')
         itemLink.appendChild(rss.createTextNode(urljoin(websiteUrl, f"/blog/{article['url']}")))
@@ -75,3 +75,5 @@ def rss_generator(blogData, currentDate):
         print("Exported: rss.xml")
 
     print(blogData)
+
+    

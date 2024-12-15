@@ -39,6 +39,30 @@ h3 {
     color: #E48D4C;
 }
 
+.font-size-1 {
+    font-size-adjust: 0.4;
+}
+.font-size-2 {
+    font-size-adjust: 0.5;
+}
+.font-size-3 {
+    font-size-adjust: 0.6;
+}
+.font-size-4 {
+    font-size-adjust: 0.7;
+}
+.font-size-5 {
+    font-size-adjust: 0.8;
+}
+
+.tagcloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-end;
+    font-size: 20px;
+}
+
 code {
 	background-color: #1a1919;
 	/*border: 5px solid #928374;*/

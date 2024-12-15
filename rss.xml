@@ -6,12 +6,12 @@
     <link>https://trueauracoral.github.io/rss.xml</link>
     <image>
       <title>ZortaZert's Title</title>
-      <url>/img/icons/chadoku.ico</url>
+      <url>https://trueauracoral.github.io/img/icons/chadoku.ico</url>
       <link>https://trueauracoral.github.io/rss.xml</link>
     </image>
     <item>
       <title>Seen it twice save it right</title>
-      <guid>save-it-twice-save-it-right.html</guid>
+      <guid>https://trueauracoral.github.io/save-it-twice-save-it-right.html</guid>
       <link>https://trueauracoral.github.io/blog/save-it-twice-save-it-right.html</link>
       <pubDate>Tue, 10 Sep 2024 00:00:00 </pubDate>
       <author>ZortaZert</author>
@@ -19,7 +19,7 @@
     </item>
     <item>
       <title>Learning Languages</title>
-      <guid>language-learning.html</guid>
+      <guid>https://trueauracoral.github.io/language-learning.html</guid>
       <link>https://trueauracoral.github.io/blog/language-learning.html</link>
       <pubDate>Sat, 25 May 2024 00:00:00 </pubDate>
       <author>ZortaZert</author>
@@ -27,7 +27,7 @@
     </item>
     <item>
       <title>Super Smash Bros Free</title>
-      <guid>super-smash-bros-free.html</guid>
+      <guid>https://trueauracoral.github.io/super-smash-bros-free.html</guid>
       <link>https://trueauracoral.github.io/blog/super-smash-bros-free.html</link>
       <pubDate>Tue, 21 Mar 2023 00:00:00 </pubDate>
       <author>ZortaZert</author>
@@ -35,7 +35,7 @@
     </item>
     <item>
       <title>Eevee Evolutions</title>
-      <guid>eveeevolutions.html</guid>
+      <guid>https://trueauracoral.github.io/eveeevolutions.html</guid>
       <link>https://trueauracoral.github.io/blog/eveeevolutions.html</link>
       <pubDate>Fri, 27 May 2022 00:00:00 </pubDate>
       <author>ZortaZert</author>
@@ -43,7 +43,7 @@
     </item>
     <item>
       <title>Fediverse review</title>
-      <guid>fediverse.html</guid>
+      <guid>https://trueauracoral.github.io/fediverse.html</guid>
       <link>https://trueauracoral.github.io/blog/fediverse.html</link>
       <pubDate>Wed, 19 Jan 2022 00:00:00 </pubDate>
       <author>ZortaZert</author>
@@ -51,7 +51,7 @@
     </item>
     <item>
       <title>How to degoogle</title>
-      <guid>degoogle.html</guid>
+      <guid>https://trueauracoral.github.io/degoogle.html</guid>
       <link>https://trueauracoral.github.io/blog/degoogle.html</link>
       <pubDate>Wed, 19 Jan 2022 00:00:00 </pubDate>
       <author>ZortaZert</author>
