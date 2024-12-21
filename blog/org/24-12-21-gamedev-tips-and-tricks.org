@@ -1,0 +1,34 @@
+#+TITLE: Game Dev Tips and Tricks For Begginers
+#+HTML_HEAD: <link rel='stylesheet' type='text/css' href='styles.css' />
+#+OPTIONS: html-style:nil toc:nil num:nil 
+#+TAGS: software tutorial gaming
+
+These are some tips and tricks that I have gathered after creating 3 whole video games in JavaScript Canvas:
+
+- It takes YEARS to make games
+  - It takes a very long time for people to get good at making games. Probably because there are so many components to it. It also takes a very long time to create games.
+  - So obviously don't compare yourself to others.
+  - Many game developers have computer science degrees or are in the process of getting one so they are very skilled in programming or the computer science field as a whole, allowing them to make so amazing games.
+- Often, people make games together which speeds up the process tremendously allowing for the creation of very large complex games.
+  - I think it's most optimal if you have buddies to make games together. Game Developing can be a very collaborative endeavor. Participating in game jams is how I started. I contributed art and kind of learned about design and how that works.
+- You have to learn how to code first.
+  - Game Engines are just a tool, they don't mean anything if you can't code.
+  - Start from a programming language like javascript or python (pygame) and make games in those first.
+  - Even a game like pong takes a lot of programming ability to be able to make. I made pong with a tutorial and then I made flappy bird by using multiple tutorials instead of one singular.
+- Game Engines are NOT the solution
+  - All these people on youtube say to use an engine to do tutorials. That might possibly work for some people however you're not going to go far past the tutorial; if you don’t know how to program at all. You need those extra coding and problem solving skills.
+  - So, again learn programming first. Even before programming, I learned scratch and logic of writing code.
+  - I think that game engines are primarily used for the creation of 3d games because it makes it slightly easier. Still I think it requires a much more complex understanding of math then the very simple math needed to make 2d games.
+    - [[https://www.reddit.com/r/gamedev/comments/1bb6psb/how_to_make_3d_games_without_using_game_engine/][https://www.reddit.com/r/gamedev/comments/1bb6psb/how_to_make_3d_games_without_using_game_engine/]]
+    - [[https://www.reddit.com/r/gamedev/comments/1azhkcg/how_important_is_linear_algebra_in_game/][https://www.reddit.com/r/gamedev/comments/1azhkcg/how_important_is_linear_algebra_in_game/]]
+- Games are basically just drawing assets, sound, keyboard/mouse detection. Everything else you just code yourself or use external libraries like for 3d as an example
+- Play lots of games in order to get ideas and inspiration. I haven’t done this but theoretically when playing games you will find things you don’t like or mechanics you want to explore further that could be made into their own respective games.
+  - I struggle with ideas, another way is to be extremely bored away from all your devices and just let your mind think. I got a game idea recently just by being bored with literally doing nothing.
+- The more games you make the better. The 20 games challenge (search it up) is good and got me started.
+  - Create games that add complexity each time that way you will challenge yourself with each project and learn more. Or the slower route is to make tons of simple games. Either way the more you make the more you learn which means you will get better.
+- Coding can be tough so work on other skills while working on your coding skills.
+  - There are so many other skills in game dev which are good to know like music, art, design, writing. Code everyday if you can, you will eventually get the hang of it and will be confident enough to start making games. It just takes time. In the meantime work on your art skills. Anyone can become an artist for games, even bad art is a style. Everyone can learn to draw. It just takes patience.
+  - Art and how the game looks is a big part of games even during the designing process, so having decent art skills is pretty essential. Art is the first thing that people see when they look at your game. Even bad art is okay as long as it doesn’t look hideous and communicates the idea of what it is to the player. 
+  - I really dislike looking at games with template assets because they are unoriginal and I have already seen them. It’s an amazing experience when you look at a game and know that you drew everything that you see.
+
+That's pretty much all the tips I have for getting started. I hope someone can find this useful.

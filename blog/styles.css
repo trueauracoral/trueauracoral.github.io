@@ -74,6 +74,13 @@ code {
 ul li {
     list-style: inside circle;
     display:list-item;
+    margin: 10px 0;
+}
+
+li p {
+    display: inline;
+    margin: 0;
+    padding: 0;
 }
 
 table {
