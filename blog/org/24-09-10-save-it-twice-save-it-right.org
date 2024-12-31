@@ -2,8 +2,6 @@
 #+HTML_HEAD: <link rel='stylesheet' type='text/css' href='styles.css' />
 #+OPTIONS: html-style:nil toc:nil num:nil 
 #+TAGS: tutorial software media
-
-* Seen it Twice, Save it Right
 One thing in life that I hate is losing things that I once had. Generally speaking I have found a rule to fight against this on the internet which is that if I really like something that I saw, watched, read/viewed I bookmark it. If I have seen a video 2 times and liked it on the second watch through then it definitely needs to be saved. Liking a piece of content is usually can be determined if it’s something that makes you laugh or smile. Unfortunately not every piece of content that you want to see again is something that makes you laug or smile.
 
 Sometimes for example I find a music piece that I liked and was super catchy like this: [[https://www.youtube.com/watch?v=Bo4STB7h3EU]]. I think that I saw it in a youtube short so int he moment I didn't think to save it and obviously didn't know the name of it. It was a pain to find it and add it immediately to my music bops where it belongs.

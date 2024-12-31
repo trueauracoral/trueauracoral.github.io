@@ -37,9 +37,6 @@ with open("bottom.html", "r") as file:
     bottomHTML = "\n" + file.read()
     soup = BeautifulSoup(bottomHTML, "html.parser")
 
-    genDateHTML = soup.find("p", {"id": "genDate"})
-    genDateHTML.replace_with(f"Last generated: {currentDate}")
-
     copyrightHTML = soup.find("p", {"id": "copyright"})
     newCopyright = BeautifulSoup(f"© ZortaZert 2021-{currentDate.year}")
     copyrightHTML.replace_with(newCopyright.p)
@@ -79,15 +76,64 @@ def main():
         #command = f'pandoc -s -c {os.path.join(articlesDir, "index.css")} {file} -o {export}.html --highlight-style=tango'
         #print(command)
         #os.system(command)
+        global topHTML  # Use the existing topHTML content
         with open(file, "r", encoding="utf8") as f:
             articleText = str(f.read())
+        
+        # Extract metadata
+        title = re.search(r"(?<=\#\+TITLE: ).*", articleText).group(0)
+        tags = re.findall(r"(?<=\#\+TAGS: ).*", articleText)[0].split(" ")
+        date = fileGetDate(os.path.basename(file))
+        
+        # Convert article to HTML
         orgToHTML = to_html(articleText, toc=False, offset=0, highlight=True)
-        if (write):
-            return orgToHTML
+
+        # Modify the topHTML with Beautiful Soup
+        soup = BeautifulSoup(topHTML, "html.parser")
+        
+        # Update the <title> tag
+        title_tag = soup.find("title")
+        if title_tag:
+            title_tag.string = f"{title} - ZortaZert's Website"
+        
+        head = soup.find("head")
+        if head:
+            og_title = soup.new_tag("meta", property="og:title", content=title)
+            head.append(og_title)
+            
+            og_site_name = soup.new_tag("meta", property="og:site_name", content="ZortaZert's Website")
+            head.append(og_site_name)
+            rss_link = soup.new_tag(
+                "link", 
+                rel="alternate", 
+                type="application/rss+xml", 
+                title="RSS Feed for ZortaZert's Blog", 
+                href="/rss.xml"
+            )
+            head.append(rss_link)
+
+        # Inject article title as a header
+        body = soup.find("body")
+        if body:
+            header_html = f"""
+                <h1>{title}</h1>
+                <p><strong>Date:</strong> {date}</p>
+                <p><strong>Tags:</strong> {', '.join(tags)}</p>
+            """
+            body.insert(1, BeautifulSoup(header_html, "html.parser"))
+        
+        # Update the topHTML for this article
+        updated_topHTML = soup.prettify()
+
+        # Generate final HTML with updated topHTML and article content
+        final_html = updated_topHTML + orgToHTML + bottomHTML
+        
+        if write:
+            return final_html
         else:
             with open(export, "w", encoding="utf8") as f:
-                f.write(htmlify(orgToHTML))
-
+                f.write(final_html)
+        
         print(f"Exported: {file}")
 
     def blogIndex(blogData):
