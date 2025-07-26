@@ -41,7 +41,7 @@ with open("bottom.html", "r") as file:
     newCopyright = BeautifulSoup(f"© ZortaZert 2021-{currentDate.year}")
     copyrightHTML.replace_with(newCopyright.p)
     bottomHTML = soup.prettify()
-    print(bottomHTML)
+    # print(bottomHTML)
 
 def htmlify(middleStuff):
     data = ""
@@ -84,6 +84,7 @@ def main():
         title = re.search(r"(?<=\#\+TITLE: ).*", articleText).group(0)
         tags = re.findall(r"(?<=\#\+TAGS: ).*", articleText)[0].split(" ")
         date = fileGetDate(os.path.basename(file))
+        date = datetime.datetime.strptime(date, "%y-%m-%d").strftime("%d/%m/%y")
         
         # Convert article to HTML
         orgToHTML = to_html(articleText, toc=False, offset=0, highlight=True)
@@ -118,7 +119,8 @@ def main():
             header_html = f"""
                 <h1>{title}</h1>
                 <p><strong>Date:</strong> {date}</p>
-                <p><strong>Tags:</strong> {', '.join(tags)}</p>
+                <p><strong>Tags:</strong> {', '.join(tags).title()}</p>
+                <hr>
             """
             body.insert(1, BeautifulSoup(header_html, "html.parser"))
         
@@ -192,13 +194,13 @@ def main():
         tags += article['tags']
     alltags = tags
     tags = list(set(tags))
-    print(tags)
+    # print(tags)
 
     tagsCounter = {}
     for tag in tags:
         tagsCounter[tag] = alltags.count(tag)
 
-    print(tagsCounter)
+    # print(tagsCounter)
 
     def get_font_class(count):
         if count == 1:
@@ -220,7 +222,7 @@ def main():
         tagcloud += "  </span>\n"
     tagcloud += "</div>"
 
-    print(tagcloud)
+    # print(tagcloud)
     
     tags += ["all"]
     tagsDir = os.path.join(os.getcwd(), "tags")

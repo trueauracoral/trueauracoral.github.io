@@ -5,8 +5,11 @@
 }
 
 body{
+    position: absolute;
     color: #DAD3CE;
     font-family:mononoki;
+    left: 20%;
+    right: 20%;
 }
 
 @font-face {
@@ -105,6 +108,7 @@ p {
     display: block;
     margin: 0;
     padding-top: 10px;
+    text-indent: 11pt;
 }
 
 #tagsList {

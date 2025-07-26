@@ -13,6 +13,7 @@
 body{
     color: #DAD3CE;
     font-family:mononoki;
+    cursor: url("./img/fishing rod mouse.png"), auto;
 }
 
 @font-face {

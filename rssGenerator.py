@@ -6,7 +6,7 @@ from orgpython import to_html
 
 def rss_generator(blogData, currentDate):
     rss = minidom.Document()
-    print(rss.getElementsByTagName("xml"))
+    # print(rss.getElementsByTagName("xml"))
     rssElement = rss.createElement('rss')
     rssElement.setAttribute('version', '2.0')
     rss.appendChild(rssElement)
@@ -74,6 +74,6 @@ def rss_generator(blogData, currentDate):
         f.write(xml_str) 
         print("Exported: rss.xml")
 
-    print(blogData)
+    # print(blogData)
 
     
