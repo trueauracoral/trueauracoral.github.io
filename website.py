@@ -61,7 +61,7 @@ def main():
             articleText = file.read()
             title = re.findall("(?<=\#\+TITLE: ).*", articleText)[0]
             tags = list(filter(None, re.findall("(?<=\#\+TAGS: ).*", articleText)[0].split(" ")))
-
+        print(datetime.datetime.fromtimestamp(strToDatetime(date)))
         blogData.append({
             "file": path,
             "title": title,
@@ -162,12 +162,12 @@ def main():
     blogData.reverse()
 
     count = 0
-    lastYear = currentDate.year
+    lastYear = max(article["date"].year for article in blogData)
     for i, article in enumerate(blogData):
         #print(currentDate)
         #print(article["date"])
         yearsAgo = int(relativedelta(currentDate, article["date"]).years)
-        year = currentDate.year - yearsAgo
+        year = article["date"].year
         if count == 0:
             blogHTML += f"\n<h2>{year}</h2>"
             blogHTML += "\n<ul>"
