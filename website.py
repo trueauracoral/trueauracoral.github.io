@@ -142,7 +142,7 @@ def main():
         blogHTML = tagsHTML + "<ul>\n"
 
         for i, article in enumerate(blogData):
-            blogHTML += f"""\n<li><a href='{blogData[i]['url']}'>{blogData[i]['title']}</a> ({blogData[i]['date'].strftime("%B %d")})</li>"""
+            blogHTML += f"""\n<li><a href='{blogData[i]['url']}'>{blogData[i]['title']}</a> - {blogData[i]['date'].strftime("%a, %B %d, %Y")}</li>"""
         blogHTML += "\n</ul>"
         return htmlify(blogHTML)
 
@@ -179,7 +179,7 @@ def main():
             lastYear = year
             count = 0
         count = count + 1
-        blogHTML += f"""\n<li><a href='{blogData[i]['url']}'>{blogData[i]['title']}</a> ({blogData[i]['date'].strftime("%B %d")})</li>"""
+        blogHTML += f"""\n<li><a href='{blogData[i]['url']}'>{blogData[i]['title']}</a> - {blogData[i]['date'].strftime("%a, %B %d, %Y")}</li>"""
     blogHTML += "\n</ul>"
 
     blogPage = os.path.join(blogDir, "index.html")
@@ -251,7 +251,7 @@ def main():
             file.write(blogIndex(tagArticles))
     
     with open(blogPage, "w", encoding="utf-8") as file:
-        file.write(htmlify(tagsHTML + blogHTML + tagcloud))
+        file.write(htmlify('<b><a href="../rss.xml">RSS</a></b><br><br>\n' +tagsHTML + blogHTML + tagcloud))
 
     # Generate Main Pages
     sourceDir = os.path.join(os.getcwd(), "source")
