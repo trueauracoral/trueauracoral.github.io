@@ -17,6 +17,7 @@ def fileGetDate(filename):
     return "-".join(filename.split("-")[:3])
 def strToDatetime(articleDate):
     return datetime.datetime.strptime(articleDate, dateformat).timestamp()
+    
 
 #https://stackoverflow.com/a/168580/24903843
 def getfiles(dirpath):
@@ -85,6 +86,8 @@ def main():
         tags = re.findall(r"(?<=\#\+TAGS: ).*", articleText)[0].split(" ")
         date = fileGetDate(os.path.basename(file))
         date = datetime.datetime.strptime(date, "%y-%m-%d").strftime("%d/%m/%y")
+        dateStr = datetime.datetime.strptime(date, "%d/%m/%y").strftime("%m/%d/%y")
+        print(dateStr)
         
         # Convert article to HTML
         orgToHTML = to_html(articleText, toc=False, offset=0, highlight=True)
@@ -118,7 +121,7 @@ def main():
         if body:
             header_html = f"""
                 <h1>{title}</h1>
-                <p><strong>Date:</strong> {date}</p>
+                <p><strong>Date:</strong> {dateStr}</p>
                 <p><strong>Tags:</strong> {', '.join(tags).title()}</p>
                 <hr>
             """
